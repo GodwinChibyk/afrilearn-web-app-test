@@ -21,7 +21,7 @@ export const NavSection = () => {
         <div className="flex flex-row items-center space-x-3">
           {pageRoutes.map((route, index) => (
             <div className="flex flex-row items-center space-x-3" key={route}>
-              <p className="text-lg capitalize text-textColor font-[family-name:var(--font-semibold)] tracking-wide">
+              <p className="text-xl capitalize text-textColor font-[family-name:var(--font-semibold)] tracking-wide">
                 {route}
               </p>
               {index !== pageRoutes.length - 1 ? (

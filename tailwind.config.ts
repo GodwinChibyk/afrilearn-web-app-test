@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindScrollbar from 'tailwind-scrollbar';
 
 const config: Config = {
   content: [
@@ -11,7 +12,7 @@ const config: Config = {
       colors: {
         primaryColor: "rgb(var(--primary-color) / <alpha-value>)",
         bgColor: "rgb(var(--background-color) / <alpha-value>)",
-        bgColorLight: "rgb(var(--light-primary-color) / <alpha-value>)",
+        primaryColorLight: "rgb(var(--light-primary-color) / <alpha-value>)",
         whiteColor: "rgb(var(--white-color) / <alpha-value>)",
         textColor: "rgb(var(--text-color) / <alpha-value>)",
         grayColor: "rgb(var(--gray-color) / <alpha-value>)",
@@ -21,6 +22,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    tailwindScrollbar({ nocompatible: true }),
+  ],
 };
 export default config;
