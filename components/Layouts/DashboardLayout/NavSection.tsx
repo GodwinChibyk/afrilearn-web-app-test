@@ -9,7 +9,7 @@ const pageRoutes = ["primary 1", "mid term test", "agricultural science"];
 
 export const NavSection = () => {
   return (
-    <nav className="p-5 sticky z-30 top-0 flex flex-row items-center justify-between bg-whiteColor shadow-md">
+    <nav className="p-5 sticky z-30 top-0 flex flex-row items-center justify-between bg-whiteColor shadow-md shadow-grayColor/10">
       <section className="flex flex-row items-center space-x-10">
         <Button
           title="assessment"
