@@ -9,8 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primaryColor: "rgb(var(--primary-color) / <alpha-value>)",
+        bgColor: "rgb(var(--background-color) / <alpha-value>)",
+        bgColorLight: "rgb(var(--light-primary-color) / <alpha-value>)",
+        whiteColor: "rgb(var(--white-color) / <alpha-value>)",
+        textColor: "rgb(var(--text-color) / <alpha-value>)",
+        grayColor: "rgb(var(--gray-color) / <alpha-value>)",
+      },
+      screens: {
+        "1xl": "1368px",
       },
     },
   },
