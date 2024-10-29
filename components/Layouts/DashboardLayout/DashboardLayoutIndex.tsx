@@ -15,7 +15,7 @@ export const DashboardLayoutIndex = ({
       {/* main section */}
       <div className="absolute inset-0 flex flex-row space-x-7">
         <SideBarSection />
-        <div className="flex-1 h-full bg-bgColor border-2 border-blue-600">{children}</div>
+        <div className="flex-1 h-full pt-[103px] bg-bgColor">{children}</div>
       </div>
     </div>
   );

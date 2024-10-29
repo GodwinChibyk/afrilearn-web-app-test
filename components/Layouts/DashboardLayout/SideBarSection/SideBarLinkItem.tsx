@@ -9,14 +9,14 @@ export const SideBarLinkItem = ({
 }: {
   linkIcon: React.ReactNode;
   isLinkActive: boolean;
-  route?: string;
+  route: string;
   title: string;
 }) => {
   return (
     <Link
-      href={route ? route : ""}
+      href={route}
       className={`flex flex-row items-center space-x-5 rounded-lg p-5 transition-all hover:bg-bgColor/80 ${
-        isLinkActive ? "bg-bgColorLight" : "bg-transparent"
+        isLinkActive ? "bg-primaryColorLight hover:bg-primaryColorLight/90" : "bg-transparent"
       }`}
     >
       {linkIcon}

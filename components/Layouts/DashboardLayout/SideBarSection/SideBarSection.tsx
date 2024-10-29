@@ -21,7 +21,7 @@ const testConfigurationLinks = [
   },
   {
     id: 2,
-    route: "/question-manager",
+    route: "/dashboard/question-manager",
     title: "question manager",
     linkIcon: <SlidersIcon className="w-5 h-5" />,
   },
@@ -69,7 +69,7 @@ const testProgressAndResultLinks = [
   },
   {
     id: 3,
-    route: "/statistics",
+    route: "/",
     title: "statistics",
     linkIcon: <PieChatIcon className="w-5 h-5" />,
   },
@@ -95,6 +95,7 @@ export const SideBarSection = () => {
                 isLinkActive={link.route === pathname}
                 title={link.title}
                 linkIcon={link.linkIcon}
+                route={link.route}
               />
             ))}
           </div>
@@ -113,6 +114,7 @@ export const SideBarSection = () => {
                 isLinkActive={link.route === pathname}
                 title={link.title}
                 linkIcon={link.linkIcon}
+                route={link.route}
               />
             ))}
           </div>
