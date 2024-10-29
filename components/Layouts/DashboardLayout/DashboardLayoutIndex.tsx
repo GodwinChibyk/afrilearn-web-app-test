@@ -21,7 +21,10 @@ export const DashboardLayoutIndex = ({
 
       {/* main section */}
       <div className="absolute inset-0 flex flex-row space-x-4 sm:space-x-20 md:space-x-10">
-        <SideBarSection showSideBarMenu={showSideBarMenu} />
+        <SideBarSection
+          showSideBarMenu={showSideBarMenu}
+          setShowSideBarMenu={setShowSideBarMenu}
+        />
         <div className="flex-1 h-full pt-[120px] pr-4 sm:pr-[80px] md:pr-[30px] bg-bgColor overflow-y-scroll lg:scrollbar scrollbar-thumb-grayColor/70 scrollbar-thin scrollbar-track-bgColor scrollbar-thumb-rounded-full hover:scrollbar-thumb-grayColor/80">
           {children}
         </div>

@@ -6,11 +6,13 @@ export const SideBarLinkItem = ({
   isLinkActive,
   route,
   title,
+  onClick,
 }: {
   linkIcon: React.ReactNode;
   isLinkActive: boolean;
   route: string;
   title: string;
+  onClick?: () => void;
 }) => {
   return (
     <Link
@@ -20,6 +22,7 @@ export const SideBarLinkItem = ({
           ? "bg-primaryColorLight hover:bg-primaryColorLight/90"
           : "bg-transparent"
       }`}
+      onClick={onClick}
     >
       {linkIcon}
       <p
