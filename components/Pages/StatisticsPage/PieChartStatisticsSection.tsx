@@ -4,7 +4,7 @@ import React from "react";
 
 export const PieChartStatisticsSection = () => {
   return (
-    <section className="mt-10 grid grid-cols-3 gap-x-[25px]">
+    <section className="mt-10 grid gap-y-[25px] 1xl:grid-cols-2 2xl:grid-cols-3 gap-x-[25px]">
       <PIeChartCard
         title="Attended"
         percentageValue={100}

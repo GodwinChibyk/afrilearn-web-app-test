@@ -18,7 +18,8 @@ const config: Config = {
         grayColor: "rgb(var(--gray-color) / <alpha-value>)",
       },
       screens: {
-        "1xl": "1368px",
+        "1xl": "1200px",
+        "3xl": "1600px",
       },
     },
   },

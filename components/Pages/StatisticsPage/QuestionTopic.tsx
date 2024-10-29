@@ -29,10 +29,10 @@ export const QuestionTopic: FC<QuestionTopicProps> = ({
             flowering plants
           </p>
           <div className="flex flex-row items-center space-x-5">
-            <p className="text-textColor/90 text-lg tracking-wide font-[family-name:var(--font-bold)]">
+            <p className="text-textColor/90 text-base sm:text-lg tracking-wide font-[family-name:var(--font-bold)]">
               {percentageValue}%
             </p>
-            <p className="text-base text-textColor/70 font-[family-name:var(--font-medium)]">
+            <p className="text-xs sm:text-base text-textColor/70 font-[family-name:var(--font-medium)]">
               {averageScore} / {totalScore}
             </p>
           </div>

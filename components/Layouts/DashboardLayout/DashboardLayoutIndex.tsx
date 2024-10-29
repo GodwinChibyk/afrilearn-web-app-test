@@ -20,9 +20,9 @@ export const DashboardLayoutIndex = ({
       />
 
       {/* main section */}
-      <div className="absolute inset-0 flex flex-row space-x-10">
+      <div className="absolute inset-0 flex flex-row space-x-4 sm:space-x-20 md:space-x-10">
         <SideBarSection showSideBarMenu={showSideBarMenu} />
-        <div className="flex-1 h-full pt-[120px] pr-[30px] bg-bgColor overflow-y-scroll scrollbar scrollbar-thumb-grayColor/70 scrollbar-track-bgColor scrollbar-thumb-rounded-full hover:scrollbar-thumb-grayColor/80">
+        <div className="flex-1 h-full pt-[120px] pr-4 sm:pr-[80px] md:pr-[30px] bg-bgColor overflow-y-scroll scrollbar scrollbar-thumb-grayColor/70 scrollbar-track-bgColor scrollbar-thumb-rounded-full hover:scrollbar-thumb-grayColor/80">
           {children}
         </div>
       </div>
