@@ -111,12 +111,21 @@ const testProgressAndResultLinks = [
   },
 ];
 
-export const SideBarSection = () => {
+export const SideBarSection = ({
+  showSideBarMenu,
+}: {
+  showSideBarMenu: boolean;
+}) => {
   //
   const pathname = usePathname();
 
   return (
-    <aside className="w-[327px] pt-[103px] pb-6 px-5 h-full bg-whiteColor shadow-md ">
+    <aside
+      className={`absolute z-10 top-0 bottom-0 left-0 
+        md:relative w-[85%] transform max-w-[327px] pt-[103px]
+         pb-6 px-5 h-full bg-whiteColor shadow-md transition-all duration-300
+    ${showSideBarMenu ? "translate-x-0" : "translate-x-[-100%] md:translate-x-0"} `}
+    >
       <div className="w-full h-full overflow-y-scroll scrollbar-none">
         {/* Test configuration */}
         <section>
