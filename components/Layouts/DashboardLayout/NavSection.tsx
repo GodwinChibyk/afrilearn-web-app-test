@@ -16,7 +16,7 @@ export const NavSection = ({
   showSideBarMenu: boolean;
 }) => {
   return (
-    <nav className="p-5 sticky z-30 top-0 flex flex-row items-center justify-between bg-whiteColor shadow-md shadow-grayColor/10">
+    <nav className="p-3 md:p-5 sticky z-30 top-0 flex flex-row items-center justify-between bg-whiteColor shadow-md shadow-grayColor/10">
       {/* mobile / tablet below @768px*/}
       <section className="flex flex-row items-center space-x-3 md:hidden">
         <Button

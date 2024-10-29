@@ -25,7 +25,7 @@ export const DashboardLayoutIndex = ({
           showSideBarMenu={showSideBarMenu}
           setShowSideBarMenu={setShowSideBarMenu}
         />
-        <div className="flex-1 h-full pt-[120px] pr-4 sm:pr-[80px] md:pr-[30px] bg-bgColor overflow-y-scroll lg:scrollbar scrollbar-thumb-grayColor/70 scrollbar-thin scrollbar-track-bgColor scrollbar-thumb-rounded-full hover:scrollbar-thumb-grayColor/80">
+        <div className="flex-1 h-full pt-[90px] md:pt-[120px] pr-4 sm:pr-[80px] md:pr-[30px] bg-bgColor overflow-y-scroll lg:scrollbar scrollbar-thumb-grayColor/70 scrollbar-thin scrollbar-track-bgColor scrollbar-thumb-rounded-full hover:scrollbar-thumb-grayColor/80">
           {children}
         </div>
       </div>
