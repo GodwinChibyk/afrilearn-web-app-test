@@ -13,9 +13,11 @@ export const DashboardLayoutIndex = ({
       <NavSection />
 
       {/* main section */}
-      <div className="absolute inset-0 flex flex-row space-x-8">
+      <div className="absolute inset-0 flex flex-row space-x-10">
         <SideBarSection />
-        <div className="flex-1 h-full pt-[120px] pr-[30px] bg-bgColor overflow-y-scroll">{children}</div>
+        <div className="flex-1 h-full pt-[120px] pr-[30px] bg-bgColor overflow-y-scroll scrollbar scrollbar-thumb-grayColor/70 scrollbar-track-bgColor scrollbar-thumb-rounded-full hover:scrollbar-thumb-grayColor/80">
+          {children}
+        </div>
       </div>
     </div>
   );

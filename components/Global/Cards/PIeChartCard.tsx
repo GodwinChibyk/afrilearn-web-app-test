@@ -26,7 +26,7 @@ export const PIeChartCard = ({
     percentageValue < 40 ? "red" : percentageValue < 70 ? "#FFDF37" : "#0BC279";
 
   return (
-    <div className="bg-whiteColor flex flex-row justify-between shadow-md shadow-grayColor/5 p-[25px] rounded-lg">
+    <div className="bg-whiteColor flex flex-row justify-between shadow-md shadow-grayColor/10 p-[25px] rounded-lg">
       <div>
         <p className="text-2xl text-textColor/60 font-[family-name:var(--font-bold)] tracking-wide">
           {title}
