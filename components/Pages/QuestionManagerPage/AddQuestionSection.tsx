@@ -5,7 +5,7 @@ import React from "react";
 
 export const AddQuestionSection = () => {
   return (
-    <div className="p-5 mt-10 flex flex-row items-center justify-between bg-whiteColor shadow-md shadow-grayColor/10">
+    <div className="lg:p-5 p-3 mt-8 md:mt-10 flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:items-center justify-between bg-whiteColor shadow-md shadow-grayColor/10">
       <section className="flex flex-row items-center space-x-10">
         {/*  */}
         <label
@@ -30,19 +30,19 @@ export const AddQuestionSection = () => {
       {/*  */}
       <section className="flex flex-row items-center space-x-3">
         <Button
-          title="reorder questions"
+          title="Reorder questions"
           className="px-2 py-2 bg-transparent transition-all hover:bg-grayColor/10"
-          titleClassName="text-textColor"
+          titleClassName="text-textColor text-sm md:text-base"
         >
-          <SortAltIcon className="mr-2 h-5 w-5" />
+          <SortAltIcon className="mr-2 h-4 w-4 lg:h-5 lg:w-5" />
         </Button>
         <div>
           <Button
             title="Add question"
             className="px-2 py-2 space-x-2 transition-all hover:bg-primaryColor/90"
-            titleClassName="font-[family-name:var(--font-semibold)]"
+            titleClassName="font-[family-name:var(--font-semibold)] text-sm md:text-base"
           >
-            <PlusIcon className="h-5 w-5" />
+            <PlusIcon className="h-4 w-4 lg:h-5 lg:w-5" />
           </Button>
         </div>
       </section>
