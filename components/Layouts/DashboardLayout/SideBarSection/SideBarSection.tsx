@@ -17,40 +17,61 @@ const testConfigurationLinks = [
     id: 1,
     route: "#",
     title: "basic settings",
-    linkIcon: <SettingsIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <SettingsIcon
+        className="w-5 h-5"
+        color={isActive ? "#374258" : "#75819A"}
+      />
+    ),
   },
   {
     id: 2,
     route: "/dashboard/question-manager",
     title: "question manager",
-    linkIcon: <SlidersIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <SlidersIcon
+        className="w-5 h-5"
+        color={isActive ? "#374258" : "#75819A"}
+      />
+    ),
   },
   {
     id: 3,
     route: "#",
     title: "question settings",
-    linkIcon: <GridIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <GridIcon className="w-5 h-5" color={isActive ? "#374258" : "#75819A"} />
+    ),
   },
 
   {
     id: 4,
     route: "#",
     title: "test start page",
-    linkIcon: <HomeIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <HomeIcon className="w-5 h-5" color={isActive ? "#374258" : "#75819A"} />
+    ),
   },
 
   {
     id: 5,
     route: "",
     title: "time settings",
-    linkIcon: <ClockIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <ClockIcon className="w-5 h-5" color={isActive ? "#374258" : "#75819A"} />
+    ),
   },
 
   {
     id: 6,
     route: "#",
     title: "grading and summary",
-    linkIcon: <DocumentIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <DocumentIcon
+        className="w-5 h-5"
+        color={isActive ? "#374258" : "#75819A"}
+      />
+    ),
   },
 ];
 
@@ -59,19 +80,34 @@ const testProgressAndResultLinks = [
     id: 1,
     route: "#",
     title: "test results",
-    linkIcon: <ChartSimpleIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <ChartSimpleIcon
+        className="w-5 h-5"
+        color={isActive ? "#374258" : "#75819A"}
+      />
+    ),
   },
   {
     id: 2,
     route: "#",
     title: "test sheets review",
-    linkIcon: <AcceptDocumentIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <AcceptDocumentIcon
+        className="w-5 h-5"
+        color={isActive ? "#374258" : "#75819A"}
+      />
+    ),
   },
   {
     id: 3,
     route: "/",
     title: "statistics",
-    linkIcon: <PieChatIcon className="w-5 h-5" />,
+    linkIcon: (isActive: boolean) => (
+      <PieChatIcon
+        className="w-5 h-5"
+        color={isActive ? "#374258" : "#75819A"}
+      />
+    ),
   },
 ];
 
@@ -94,7 +130,7 @@ export const SideBarSection = () => {
                 key={link.id}
                 isLinkActive={link.route === pathname}
                 title={link.title}
-                linkIcon={link.linkIcon}
+                linkIcon={link.linkIcon(link.route === pathname)}
                 route={link.route}
               />
             ))}
@@ -113,7 +149,7 @@ export const SideBarSection = () => {
                 key={link.id}
                 isLinkActive={link.route === pathname}
                 title={link.title}
-                linkIcon={link.linkIcon}
+                linkIcon={link.linkIcon(link.route === pathname)}
                 route={link.route}
               />
             ))}
