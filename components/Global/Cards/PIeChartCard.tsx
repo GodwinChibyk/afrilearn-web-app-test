@@ -1,16 +1,30 @@
 import React from "react";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 export const PIeChartCard = ({
   title,
-  percentage,
+  percentageValue,
   averageOne,
   averageTwo,
+  pieChartWidth,
+  pieChartHeight,
 }: {
   title: string;
-  percentage: number;
+  percentageValue: number;
   averageOne?: number;
   averageTwo?: number;
+  pieChartWidth: number;
+  pieChartHeight: number;
 }) => {
+  //
+  const data = [
+    { name: "Group A", value: 100 - percentageValue },
+    { name: "Group B", value: percentageValue ?? 100 },
+  ];
+  //
+  const colorRange =
+    percentageValue < 40 ? "red" : percentageValue < 70 ? "#FFDF37" : "#0BC279";
+
   return (
     <div className="bg-whiteColor flex flex-row justify-between shadow-md shadow-grayColor/5 p-[25px] rounded-lg">
       <div>
@@ -18,15 +32,44 @@ export const PIeChartCard = ({
           {title}
         </p>
       </div>
-      <div className="w-[196px] h-[196px] rounded-full border-[10px] border-primaryColor flex flex-col items-center justify-center">
-        <p className="text-3xl text-textColor font-[family-name:var(--font-semibold)]">
-          {percentage}%
-        </p>
-        {averageOne && averageTwo ? (
-          <p className="text-sm mt-1 tracking-wide text-textColor/70 font-[family-name:var(--font-medium)] ">
-            {averageOne} / {averageTwo}
+
+      {/*  */}
+      <div className="relative">
+        <ResponsiveContainer width={pieChartWidth} height={pieChartHeight}>
+          <PieChart
+            width={pieChartWidth}
+            height={pieChartHeight}
+            onMouseEnter={() => {}}
+          >
+            <Pie
+              data={data}
+              cx={pieChartWidth / 2 - 7}
+              cy={pieChartHeight / 2 - 7}
+              innerRadius={pieChartWidth * 0.4 + 3}
+              outerRadius={pieChartHeight / 2 - 2}
+              startAngle={-270}
+              endAngle={200}
+              fill="white"
+              paddingAngle={0}
+              dataKey="value"
+              stroke={`transparent`}
+              cornerRadius={10}
+            >
+              <Cell key={`cell-${data[0].name}`} fill="#F1F5F8" />
+              <Cell key={`cell-${data[1].name}`} fill={colorRange} />
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+        <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+          <p className="flex flex-row items-center justify-center text-3xl text-textColor font-[family-name:var(--font-semibold)]">
+            {`${percentageValue.toFixed() ?? 0}%`}
           </p>
-        ) : null}
+          {averageOne && averageTwo ? (
+            <p className="text-sm mt-1 text-center tracking-wide text-textColor/70 font-[family-name:var(--font-medium)] ">
+              {averageOne} / {averageTwo}
+            </p>
+          ) : null}
+        </div>
       </div>
     </div>
   );
