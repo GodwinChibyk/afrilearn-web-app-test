@@ -8,6 +8,9 @@ import { GridIcon } from "@/components/Icons/GridIcon";
 import { HomeIcon } from "@/components/Icons/HomeIcon";
 import { ClockIcon } from "@/components/Icons/ClockIcon";
 import { DocumentIcon } from "@/components/Icons/DocumentIcon";
+import { ChartSimpleIcon } from "@/components/Icons/ChartSimpleIcon";
+import { AcceptDocumentIcon } from "@/components/Icons/AcceptDocumentIcon";
+import PieChatIcon from "@/components/Icons/PieChatIcon";
 
 const testConfigurationLinks = [
   {
@@ -56,19 +59,19 @@ const testProgressAndResultLinks = [
     id: 1,
     route: "#",
     title: "test results",
-    linkIcon: <SettingsIcon className="w-5 h-5" />,
+    linkIcon: <ChartSimpleIcon className="w-5 h-5" />,
   },
   {
     id: 2,
     route: "#",
     title: "test sheets review",
-    linkIcon: <SlidersIcon className="w-5 h-5" />,
+    linkIcon: <AcceptDocumentIcon className="w-5 h-5" />,
   },
   {
     id: 3,
     route: "/statistics",
     title: "statistics",
-    linkIcon: <GridIcon className="w-5 h-5" />,
+    linkIcon: <PieChatIcon className="w-5 h-5" />,
   },
 ];
 
