@@ -17,7 +17,7 @@ export const SideBarLinkItem = ({
   return (
     <Link
       href={route}
-      className={`flex flex-row items-center space-x-5 rounded-lg p-5 transition-all hover:bg-bgColor/80 ${
+      className={`flex flex-row items-center space-x-5 rounded-lg p-3 md:p-5 transition-all hover:bg-bgColor/80 ${
         isLinkActive
           ? "bg-primaryColorLight hover:bg-primaryColorLight/90"
           : "bg-transparent"
@@ -26,7 +26,7 @@ export const SideBarLinkItem = ({
     >
       {linkIcon}
       <p
-        className={`text-base text-pretty capitalize text-textColor/90 tracking-wide font-[family-name:var(--font-medium)] tex ${
+        className={`text-base  text-nowrap capitalize text-textColor/90 tracking-wide font-[family-name:var(--font-medium)]${
           isLinkActive ? "font-[family-name:var(--font-semibold)]" : ""
         }`}
       >
