@@ -26,7 +26,7 @@ export const SideBarLinkItem = ({
     >
       {linkIcon}
       <p
-        className={`text-base capitalize text-textColor/90 tracking-wide font-[family-name:var(--font-medium)] ${
+        className={`text-base text-pretty capitalize text-textColor/90 tracking-wide font-[family-name:var(--font-medium)] tex ${
           isLinkActive ? "font-[family-name:var(--font-semibold)]" : ""
         }`}
       >

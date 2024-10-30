@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { IQuestion, questions } from "@/base/dummyData/questions"; // Adjust the import path as necessary
+import { IQuestion, questions } from "@/base/dummyData/questions"; 
 import { QuestionCard } from "@/components/Global/Cards/QuestionCard";
 
 // Mock question data
