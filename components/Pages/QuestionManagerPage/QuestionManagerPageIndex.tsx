@@ -1,6 +1,6 @@
 import { SlidersIcon } from "@/components/Icons/SlidersIcon";
 import React from "react";
-import { QuestionCard } from "./QuestionCard";
+import { QuestionCard } from "../../Global/Cards/QuestionCard";
 import { questions } from "@/base/dummyData/questions";
 import { AddQuestionSection } from "./AddQuestionSection";
 

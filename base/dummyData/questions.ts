@@ -3,7 +3,7 @@ export interface IQuestion {
   questionNumber: number;
   question: string;
   options: string[];
-  imageUrl?: string;
+  imageUrl: string;
 }
 
 export const questions: IQuestion[] = [

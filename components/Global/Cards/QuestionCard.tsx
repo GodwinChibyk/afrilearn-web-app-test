@@ -10,7 +10,7 @@ interface QuestionCardProps {
 
 export const QuestionCard: FC<QuestionCardProps> = ({ question }) => {
   //
-  const [selectedAnswer, setSelectedAnswer] = React.useState("option2");
+  const [selectedAnswer, setSelectedAnswer] = React.useState("");
 
   return (
     <article className="w-full mt-[30px] relative bg-white shadow-md shadow-grayColor/10 rounded-lg overflow-hidden">
@@ -58,7 +58,7 @@ export const QuestionCard: FC<QuestionCardProps> = ({ question }) => {
 
           {/*  */}
           {question.imageUrl ? (
-            <div className="relative w-full max-w-[230px] h-[220px]">
+            <div data-testid="question-image-wrapper" className="relative w-full max-w-[230px] h-[220px]">
               <Image
                 src={question.imageUrl}
                 alt="question 1 image"

@@ -23,6 +23,7 @@ export const QuestionTopic: FC<QuestionTopicProps> = ({
         <div
           className="absolute top-0 bottom-0 rounded-lg transition-all duration-500"
           style={{ width: `${percentageValue}%`, backgroundColor: color }}
+          data-testid="percentage-bar"
         />
         <div className="absolute inset-0 px-[10px] flex flex-row items-center justify-between">
           <p className="text-textColor text-[12px] uppercase font-[family-name:var(--font-bold)]">
